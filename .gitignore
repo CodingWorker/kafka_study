@@ -1,0 +1,6 @@
+#for maven
+**/target/*
+
+#for gradle
+**/.gradle/
+**/build/*

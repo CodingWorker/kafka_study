@@ -1,4 +1,4 @@
-package com.test.kafka_study;
+package com.test.kafka_study.demo;
 
 /**
  * Created by IntelliJ IDEA
@@ -8,7 +8,7 @@ package com.test.kafka_study;
  */
 public class ConfigAPI {
         public interface KafkaProperties {
-            String ZK = "10.211.55.15:2181,10.211.55.17:2181,10.211.55.18:2181";
+            String ZK = "localhost:2181";
             String GROUP_ID = "test_group1";
             String TOPIC = "test2";
             String BROKER_LIST = "10.211.55.15:9092,10.211.55.17:9092,10.211.55.18:9092";

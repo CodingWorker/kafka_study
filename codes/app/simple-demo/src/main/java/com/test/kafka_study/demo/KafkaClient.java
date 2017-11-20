@@ -1,4 +1,4 @@
-package com.test.kafka_study;
+package com.test.kafka_study.demo;
 
 /**
  * Created by IntelliJ IDEA

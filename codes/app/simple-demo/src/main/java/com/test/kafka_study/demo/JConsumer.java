@@ -1,4 +1,12 @@
-package com.test.kafka_study;
+package com.test.kafka_study.demo;
+
+import kafka.consumer.*;
+import kafka.javaapi.consumer.*;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Properties;
 
 /**
  * Created by IntelliJ IDEA
@@ -7,7 +15,7 @@ package com.test.kafka_study;
  * Date: 2017/10/23
  */
 public class JConsumer extends Thread{
-        private ConsumerConnector consumer;
+        private kafka.javaapi.consumer.ConsumerConnector consumer;
         private String topic;
         private final int SLEEP = 1000 * 3;
 
@@ -18,8 +26,8 @@ public class JConsumer extends Thread{
 
         private ConsumerConfig consumerConfig() {
             Properties props = new Properties();
-            props.put("zookeeper.connect", KafkaProperties.ZK);
-            props.put("group.id", KafkaProperties.GROUP_ID);
+            props.put("zookeeper.connect", ConfigAPI.KafkaProperties.ZK);
+            props.put("group.id", ConfigAPI.KafkaProperties.GROUP_ID);
             props.put("zookeeper.session.timeout.ms", "40000");
             props.put("zookeeper.sync.time.ms", "200");
             props.put("auto.commit.interval.ms", "1000");
